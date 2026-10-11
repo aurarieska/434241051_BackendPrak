@@ -6,9 +6,10 @@ import "time"
 type JenisCuti struct {
 	ID        int       `json:"id"`
 	Nama      string    `json:"nama"`
-	Deskripsi *string   `json:"deskripsi"` // nullable
+	Deskripsi *string   `json:"deskripsi"`
 	IsActive  bool      `json:"is_active"`
 	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
 }
 
 // CreateJenisCutiRequest adalah body untuk POST /jenis-cuti
@@ -30,3 +31,4 @@ type PatchJenisCutiRequest struct {
 	Deskripsi *string `json:"deskripsi" validate:"omitnil,max=500"`
 	IsActive  *bool   `json:"is_active" validate:"omitnil"`
 }
+
